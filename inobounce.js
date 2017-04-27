@@ -27,6 +27,11 @@
 				return;
 			}
 
+			// Ignore elements that have been marked as no-inobounce
+			if ( el.classList.contains('no-inobounce') ) {
+				return;
+			}
+
 			var scrolling = style.getPropertyValue('-webkit-overflow-scrolling');
 			var overflowY = style.getPropertyValue('overflow-y');
 			var height = parseInt(style.getPropertyValue('height'), 10);
